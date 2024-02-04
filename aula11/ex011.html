@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>País</title>
+    <style>
+        * {
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de países</h1>
+    Paìs de origem: <input type="text" name="pais" id="pais"> <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res">
+
+    </div>
+    <script>
+        function verificar() {
+            var pais = document.querySelector('input#pais')
+            var res = document.querySelector('div#res')
+            res.innerHTML = `<p>Seu país é:<strong>${pais.value}</strong>!</p>`
+            if (pais.value == 'Brasil') {
+                res.innerHTML += '<p>Você é <strong>Brasileiro</strong>!</p>'
+            } else {
+                res.innerHTML += '<p>Você é <strong>Estrangeiro</strong>!</p>'
+            }
+            res.innerHTML += '<p>Tenha um Bom Dia!!!</p>'
+        }
+    </script>
+</body>
+</html>
